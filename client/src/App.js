@@ -1,11 +1,9 @@
 import Header from "./components/Header";
 import './App.css';
 
-function App() {
+var App = () => {
     return (
-        <div className="App">
-            <Header />
-        </div>
+        <Header />
     );
 }
 

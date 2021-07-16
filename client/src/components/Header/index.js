@@ -1,10 +1,10 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 
-var Header = () => {
+const Header = () => {
     return (
-        <Navbar variant="primary" expand="lg" className="p-4">
-            <h1 className="text-center">Sudoku Solver</h1>
+        <Navbar bg="primary" variant="dark" expand="lg" className="p-4 justify-content-center">
+            <Navbar.Brand>Sudoku Solver</Navbar.Brand>
         </Navbar>
     );
 }
