@@ -1,0 +1,11 @@
+.cell {
+    padding: 12px;
+    border: solid;
+    border-radius: 1px;
+    border-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.value {
+    margin: 0px;
+}
