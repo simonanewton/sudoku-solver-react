@@ -1,12 +1,12 @@
 import Header from "./components/Header";
 import './App.css';
-import Game from "./components/Game";
+import Board from "./components/Board";
 
 var App = () => {
     return (
         <div>
             <Header />
-            <Game />
+            <Board />
         </div>
     );
 }
