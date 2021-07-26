@@ -6,14 +6,16 @@ class Cell extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 0,
+            value: null,
             filled: false
         };
     }
 
+    modifyValue = () => {}
+
     render = () => {
         return (
-            <div className="cell">
+            <div className="cell" onClick={this.modifyValue}>
                 <p className="value">{this.state.value}</p>
             </div>
         );

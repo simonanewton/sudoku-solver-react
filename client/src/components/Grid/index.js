@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Cell from "../Cell";
+import "./index.css";
 
 class Grid extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Grid extends Component {
 
     render = () => {
         return (
-            <div>
+            <div className="grid">
                 <div className="d-flex">
                     <Cell />
                     <Cell />
