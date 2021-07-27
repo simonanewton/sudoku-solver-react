@@ -16,7 +16,9 @@ class Cell extends Component {
     render = () => {
         return (
             <div className="cell" onClick={this.modifyValue}>
-                <p className="value">{this.state.value}</p>
+                <form>
+                    <input type="number" value={this.state.value} min="0" max="9" maxLength="1"/>
+                </form>
             </div>
         );
 

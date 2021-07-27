@@ -4,11 +4,34 @@
     border: solid;
     border-width: 1px;
     border-color: black;
+    font-size: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    padding: 9%;
 }
 
-.value {
-    margin: auto;
+.cell:hover {
+    background-color: rgb(210, 240, 250);
+}
+
+form {
+    width: 48px;
+    height: 48px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    width: 48px;
+    height: 48px;
+    border-style: none;
+    text-align: center;
+    padding: 0;
 }
