@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import {  } from "react-bootstrap";
 import "./index.css";
 
 class Cell extends Component {
@@ -7,17 +6,22 @@ class Cell extends Component {
         super(props);
         this.state = {
             value: null,
-            filled: false
         };
     }
 
-    modifyValue = () => {}
+    componentDidMount = () => {
+        this.setState({ value: this.props.value !== 0 ? this.props.value : null });
+    }
+
+    changeValue = (event) => {
+        this.setState({ value: event.target.value });
+    }
 
     render = () => {
         return (
-            <div className="cell" onClick={this.modifyValue}>
+            <div className="cell">
                 <form>
-                    <input type="number" value={this.state.value} min="0" max="9" maxLength="1"/>
+                    <input type="number" min="1" max="9" maxLength="1" value={this.state.value} onChange={this.changeValue} />
                 </form>
             </div>
         );
