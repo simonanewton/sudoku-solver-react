@@ -13,7 +13,7 @@
 	},
   "repository": {
     "type": "git",
-    "url": "TBD"
+    "url": "https://github.com/simonanewton/sudoku-solver-react"
   },
   "author": "Simon Newton",
   "license": "MIT",
