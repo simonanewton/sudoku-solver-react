@@ -5,16 +5,16 @@ class Cell extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: null,
+            value: "",
         };
-    }
-
-    componentDidMount = () => {
-        this.setState({ value: this.props.value !== 0 ? this.props.value : null });
     }
 
     changeValue = (event) => {
         this.setState({ value: event.target.value });
+    }
+
+    componentDidMount = () => {
+        this.setState({ value: this.props.value !== 0 ? this.props.value : "" });
     }
 
     render = () => {

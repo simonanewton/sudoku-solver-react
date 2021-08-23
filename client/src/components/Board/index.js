@@ -6,22 +6,22 @@ import "./index.css";
 class Board extends Component {
     render = () => {
         return (
-            <Container className="p-4 d-flex justify-content-center">
+            <Container className="p-3 d-flex justify-content-center">
                 <div className="board">
                     <div className="d-flex">
-                        <Grid values={this.props.values[0]} />
-                        <Grid values={this.props.values[1]} />
-                        <Grid values={this.props.values[2]} />
+                        <Grid key={this.props.values.board[0]} values={this.props.values.board[0]} />
+                        <Grid key={this.props.values.board[1]} values={this.props.values.board[1]} />
+                        <Grid key={this.props.values.board[2]} values={this.props.values.board[2]} />
                     </div>
                     <div className="d-flex">
-                        <Grid values={this.props.values[3]} />
-                        <Grid values={this.props.values[4]} />
-                        <Grid values={this.props.values[5]} />
+                        <Grid key={this.props.values.board[3]} values={this.props.values.board[3]} />
+                        <Grid key={this.props.values.board[4]} values={this.props.values.board[4]} />
+                        <Grid key={this.props.values.board[5]} values={this.props.values.board[5]} />
                     </div>
                     <div className="d-flex">
-                        <Grid values={this.props.values[6]} />
-                        <Grid values={this.props.values[7]} />
-                        <Grid values={this.props.values[8]} />
+                        <Grid key={this.props.values.board[6]} values={this.props.values.board[6]} />
+                        <Grid key={this.props.values.board[7]} values={this.props.values.board[7]} />
+                        <Grid key={this.props.values.board[8]} values={this.props.values.board[8]} />
                     </div>
                 </div>
             </Container>
