@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import Generator from "./components/Generator";
+// import Generator from "./components/Generator";
+import ControlPanel from "./components/ControlPanel";
+import InputPanel from "./components/InputPanel";
 import Board from "./components/Board";
-import './App.css';
+import "./App.css";
 
 class App extends Component {
     constructor(props) {
@@ -27,8 +29,17 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Generator generate={this.generateNewBoard} />
-                {this.state.values ? <Board values={this.state.values} /> : null}
+                <div className="d-flex justify-content-center">
+                    <div className="my-auto">
+                        <ControlPanel />
+                    </div>
+                    <div className="">
+                        {this.state.values ? <Board values={this.state.values} /> : null}
+                    </div>
+                    <div className="my-auto">
+                        <InputPanel />
+                    </div>
+                </div>
             </div>
         );
     }
