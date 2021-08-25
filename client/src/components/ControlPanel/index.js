@@ -6,7 +6,7 @@ class ControlPanel extends Component {
         return (
             <Card className="d-grid gap-4 p-4 text-center">
                 <div>
-                    <h2 className="m-0 text-center">New Game</h2>
+                    <h3 className="m-0 text-center">New Game</h3>
                     <hr className="mb-0"/>
                 </div>
                 <Button variant="outline-success">Easy Puzzle</Button>

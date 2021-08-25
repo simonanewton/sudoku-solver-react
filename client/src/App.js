@@ -33,7 +33,7 @@ class App extends Component {
                     <div className="my-auto">
                         <ControlPanel />
                     </div>
-                    <div className="">
+                    <div className="mx-3">
                         {this.state.values ? <Board values={this.state.values} /> : null}
                     </div>
                     <div className="my-auto">
