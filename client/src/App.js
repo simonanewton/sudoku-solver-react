@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-// import Generator from "./components/Generator";
 import ControlPanel from "./components/ControlPanel";
 import InputPanel from "./components/InputPanel";
 import Board from "./components/Board";
@@ -10,19 +9,27 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            values: null
+            values: null,
+            difficulty: null
         }
     }
 
-    generateNewBoard = () => {
-        fetch("https://sugoku.herokuapp.com/board?difficulty=easy")
+    updateDifficulty = (value) => {
+        this.setState({ difficulty: value });
+    }
+
+    generateNewBoard = (difficulty) => {
+        this.updateDifficulty(difficulty);
+        var requestParam = difficulty ? "?difficulty=" + difficulty : difficulty;
+        fetch(`https://sugoku.herokuapp.com/board${requestParam}`)
             .then(res => res.json())
             .then(res => this.setState({ values: res }))
             .catch(err => console.log(err));
     }
 
     componentDidMount = () => {
-        this.generateNewBoard();
+        this.updateDifficulty("random");
+        this.generateNewBoard("random");
     }
 
     render = () => {
@@ -31,13 +38,13 @@ class App extends Component {
                 <Header />
                 <div className="d-flex justify-content-center">
                     <div className="my-auto">
-                        <ControlPanel />
+                        <ControlPanel generate={this.generateNewBoard} />
                     </div>
                     <div className="mx-3">
                         {this.state.values ? <Board values={this.state.values} /> : null}
                     </div>
                     <div className="my-auto">
-                        <InputPanel />
+                        <InputPanel difficulty={this.state.difficulty} />
                     </div>
                 </div>
             </div>

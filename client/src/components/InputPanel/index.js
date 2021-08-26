@@ -3,12 +3,16 @@ import { Card, Button } from "react-bootstrap";
 import "./index.css";
 
 class InputPanel extends Component {
+    capitalizeDifficulty = (difficulty) => {
+        return difficulty ? difficulty.charAt(0).toUpperCase() + difficulty.slice(1) : "N/A";
+    }
+
     render = () => {
         return (
             <Card className="p-3">
                 <div className="p-2 d-flex justify-content-between w-100">
-                    <h5 className="m-0">Difficulty: Easy</h5>
-                    <p className="m-0">Time: 0s</p>
+                    <h5 className="m-0">{`Difficulty: ${this.capitalizeDifficulty(this.props.difficulty)}`}</h5>
+                    <p className="m-0">0s</p>
                 </div>
                 <hr className="mx-2" />
                 <div className="align-items-center">

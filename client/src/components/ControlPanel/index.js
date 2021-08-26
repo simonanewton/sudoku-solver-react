@@ -9,13 +9,13 @@ class ControlPanel extends Component {
                     <h3 className="m-0 text-center">New Game</h3>
                     <hr className="mb-0"/>
                 </div>
-                <Button variant="outline-success">Easy Puzzle</Button>
-                <Button variant="outline-warning">Medium Puzzle</Button>
-                <Button variant="outline-danger">Hard Puzzle</Button>
-                <Button variant="outline-dark">Random Puzzle</Button>
+                <Button variant="outline-success" onClick={() => this.props.generate("easy")}>Easy Puzzle</Button>
+                <Button variant="outline-warning" onClick={() => this.props.generate("medium")}>Medium Puzzle</Button>
+                <Button variant="outline-danger" onClick={() => this.props.generate("hard")}>Hard Puzzle</Button>
+                <Button variant="outline-dark" onClick={() => this.props.generate("random")}>Random Puzzle</Button>
                 <div>
                     <hr className="mt-0" />
-                    <Button variant="outline-primary" className="mt-2 w-100">Reset Board</Button>
+                    <Button variant="outline-primary" className="mt-2 w-100" onClick={() => this.props.generate("")}>Reset Board</Button>
                 </div>
             </Card>
         );
