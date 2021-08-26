@@ -15,7 +15,7 @@ class InputPanel extends Component {
                     <p className="m-0">0s</p>
                 </div>
                 <hr className="mx-2" />
-                <div className="align-items-center">
+                <div className="mx-auto">
                     <div className="d-flex">
                         <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">1</Button>
                         <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">2</Button>
@@ -34,7 +34,7 @@ class InputPanel extends Component {
                 </div>
                 <hr className="my-3 mx-2" />
                 <div className="p-2 text-center">
-                    <Button variant="outline-success" className="w-100">Solve Puzzle</Button>
+                    <Button variant="outline-success" className="w-100">Check Solution</Button>
                 </div>
             </Card>
         );
