@@ -1,17 +1,22 @@
 .cell {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border: solid;
     border-width: 1px;
     border-color: black;
     font-size: 24px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
+.preset {
+    font-weight: bold;
+    line-height: 53px;
+    cursor: default;
+}
+
 form {
-    width: 48px;
-    height: 48px;
+    width: 53px;
+    height: 53px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -25,13 +30,15 @@ input:focus {
 }
 
 input {
-    width: 48px;
-    height: 48px;
+    width: 53px;
+    height: 53px;
     border-style: none;
     text-align: center;
     padding: 0;
+    caret-color: transparent;
+    cursor: pointer;
 }
 
-input:hover {
+input:hover, .active {
     background-color: rgb(210, 240, 250);
 }

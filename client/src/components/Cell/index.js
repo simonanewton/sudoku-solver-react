@@ -6,7 +6,17 @@ class Cell extends Component {
         super(props);
         this.state = {
             value: "",
+            active: false,
+            preset: false
         };
+    }
+
+    activateCell = () => {
+        this.setState({ active: true });
+    }
+
+    deactivateCell = () => {
+        this.setState({ active: false });
     }
 
     changeValue = (event) => {
@@ -14,18 +24,23 @@ class Cell extends Component {
     }
 
     componentDidMount = () => {
-        this.setState({ value: this.props.value !== 0 ? this.props.value : "" });
+        if (this.props.value !== 0) this.setState({ value: this.props.value, preset: true });
+        else this.setState({ value: "", preset: false });
     }
 
     render = () => {
         return (
             <div className="cell">
-                <form>
-                    <input type="number" min="1" max="9" maxLength="1" value={this.state.value} onChange={this.changeValue} />
-                </form>
+                {this.state.preset ?
+                    <span className="preset">{this.state.value}</span> :
+                    <form>
+                        <input type="number" min="1" max="9" maxLength="1" value={this.state.value}
+                            onFocus={this.activateCell} onBlur={this.deactivateCell}
+                            onChange={this.changeValue} className={`${this.state.active ? "active" : ""}`} />
+                    </form>
+                }
             </div>
         );
-
     }
 }
 
