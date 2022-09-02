@@ -39,6 +39,14 @@ input {
     cursor: pointer;
 }
 
-input:hover, .active {
+input:hover {
     background-color: rgb(210, 240, 250);
+}
+
+.active {
+    background-color: rgb(210, 240, 250);
+}
+
+.invalid {
+    background-color: rgb(250, 210, 210);
 }

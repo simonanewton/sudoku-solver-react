@@ -1,24 +1,40 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import Row from "../Row";
+import { Container, Row } from "react-bootstrap";
+import Cell from "../Cell";
 import "./index.css";
 
 class Board extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            values: []
+        }
+    }
+
+    renderCells = (values) => {
+        let cellNum = 0;
+        let rowNum = 100;
+        let cellArray = [];
+        for (let i = 0; i < values.length; i++) {
+            let cellRow = [];
+            for (let j = 0; j < values[i].length; j++) {
+                cellRow.push(<Cell key={cellNum++} value={values[i][j]} />);
+            }
+            cellArray.push(<Row key={rowNum++} className="g-0 flex-nowrap">{cellRow}</Row>);
+
+        }
+        return cellArray;
+    }
+
+    componentDidMount = () => {
+        this.setState({ values: this.props.values });
+    }
+
     render = () => {
         return (
-            <Container className="p-3 d-flex justify-content-center">
-                <div className="board">
-                    <div>
-                        <Row key={this.props.values.board[0]} values={this.props.values.board[0]} />
-                        <Row key={this.props.values.board[1]} values={this.props.values.board[1]} />
-                        <Row key={this.props.values.board[2]} values={this.props.values.board[2]} />
-                        <Row key={this.props.values.board[3]} values={this.props.values.board[3]} />
-                        <Row key={this.props.values.board[4]} values={this.props.values.board[4]} />
-                        <Row key={this.props.values.board[5]} values={this.props.values.board[5]} />
-                        <Row key={this.props.values.board[6]} values={this.props.values.board[6]} />
-                        <Row key={this.props.values.board[7]} values={this.props.values.board[7]} />
-                        <Row key={this.props.values.board[8]} values={this.props.values.board[8]} />
-                    </div>
+            <Container className="p-3">
+                <div className="border border-dark border-3">
+                    {this.renderCells(this.state.values)}
                 </div>
             </Container>
         );

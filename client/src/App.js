@@ -14,21 +14,15 @@ class App extends Component {
         }
     }
 
-    updateDifficulty = (value) => {
-        this.setState({ difficulty: value });
-    }
-
-    generateNewBoard = (difficulty) => {
-        this.updateDifficulty(difficulty);
-        var requestParam = difficulty ? "?difficulty=" + difficulty : difficulty;
+    generateNewBoard = (level) => {
+        var requestParam = level ? "?difficulty=" + level : level;
         fetch(`https://sugoku.herokuapp.com/board${requestParam}`)
             .then(res => res.json())
-            .then(res => this.setState({ values: res }))
+            .then(res => this.setState({ values: res.board, difficulty: level }))
             .catch(err => console.log(err));
     }
 
     componentDidMount = () => {
-        this.updateDifficulty("random");
         this.generateNewBoard("random");
     }
 
