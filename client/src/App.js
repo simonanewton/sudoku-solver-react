@@ -41,11 +41,12 @@ class App extends Component {
         fetch(`https://sugoku.herokuapp.com/board${requestParam}`)
             .then(res => res.json())
             .then(res => this.setState({ values: res.board, difficulty: level }))
-            .catch(err => console.log(err));    }
+            .catch(err => console.log(err));
+    }
 
     componentDidMount = () => {
-        this.generateNewBoard("random");
         this.startTimer();
+        this.generateNewBoard("random");
     }
 
     render = () => {
