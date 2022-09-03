@@ -12,29 +12,12 @@ class InputPanel extends Component {
             <Card className="p-3">
                 <div className="p-2 d-flex justify-content-between w-100">
                     <h5 className="m-0">{`Difficulty: ${this.capitalizeDifficulty(this.props.difficulty)}`}</h5>
-                    <p className="m-0">0s</p>
+                    <p className="m-0">{`${this.props.time}s`}</p>
                 </div>
-                <hr className="mx-2" />
-                <div className="mx-auto">
-                    <div className="d-flex">
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">1</Button>
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">2</Button>
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">3</Button>
-                    </div>
-                    <div className="d-flex">
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">4</Button>
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">5</Button>
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">6</Button>
-                    </div>
-                    <div className="d-flex">
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">7</Button>
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">8</Button>
-                        <Button variant="outline-secondary" size="lg" className="m-2 inputBtn">9</Button>
-                    </div>
-                </div>
-                <hr className="my-3 mx-2" />
+                <hr className="mx-2 mb-3" />
                 <div className="p-2 text-center">
-                    <Button variant="outline-success" className="w-100">Check Solution</Button>
+                    <Button variant="outline-primary" className="mb-4 w-100" onClick={() => this.props.generate("")}>Reset Board</Button>
+                    <Button variant="outline-success" className="w-100" onClick={() => {}}>Check Solution</Button>
                 </div>
             </Card>
         );

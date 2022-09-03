@@ -13,10 +13,6 @@ class ControlPanel extends Component {
                 <Button variant="outline-warning" onClick={() => this.props.generate("medium")}>Medium Puzzle</Button>
                 <Button variant="outline-danger" onClick={() => this.props.generate("hard")}>Hard Puzzle</Button>
                 <Button variant="outline-dark" onClick={() => this.props.generate("random")}>Random Puzzle</Button>
-                <div>
-                    <hr className="mt-0" />
-                    <Button variant="outline-primary" className="mt-2 w-100" onClick={() => this.props.generate("")}>Reset Board</Button>
-                </div>
             </Card>
         );
     }
