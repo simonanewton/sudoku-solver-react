@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import Grid from "../Grid";
+import { Container, Row } from "react-bootstrap";
+import Cell from "../Cell";
 import "./index.css";
 
 class Board extends Component {
@@ -15,10 +15,22 @@ class Board extends Component {
         this.setState({ userValues: [] });
     }
 
+    renderCells = (values) => {
+        let cells = [];
+        values.forEach(row => {
+            let cellRow = [];
+            row.forEach(value => cellRow.push(<Cell value={value} />));
+            cells.push(<Row className="m-0">{cellRow}</Row>);
+        });
+        return cells;
+    }
+
     render = () => {
         return (
-            <Container className="p-3">
-                <Grid values={this.props.values} />
+            <Container>
+                <div className="border border-dark border-3">
+                    {this.renderCells(this.props.values)}
+                </div>
             </Container>
         );
     }

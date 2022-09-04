@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container } from "react-bootstrap";
 import Header from "./components/Header";
 import ControlPanel from "./components/ControlPanel";
 import InputPanel from "./components/InputPanel";
@@ -53,7 +54,7 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <div className="d-flex justify-content-center">
+                <Container fluid className="d-flex justify-content-center">
                     <div className="my-auto">
                         <ControlPanel generate={this.generateNewBoard} />
                     </div>
@@ -63,7 +64,7 @@ class App extends Component {
                     <div className="my-auto">
                         <InputPanel difficulty={this.state.difficulty} time={this.state.time} generate={this.generateNewBoard} />
                     </div>
-                </div>
+                </Container>
             </div>
         );
     }

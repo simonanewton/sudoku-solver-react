@@ -1,22 +1,23 @@
-.cell {
-    width: 55px;
-    height: 55px;
+input {
+    width: 4rem;
+    height: 4rem;
     border: solid;
     border-width: 1px;
     border-color: black;
     font-size: 24px;
     text-align: center;
+    padding: 0;
+    caret-color: transparent;
+    cursor: pointer;
 }
 
-.preset {
-    font-weight: bold;
-    line-height: 53px;
-    cursor: default;
+input:enabled:hover {
+    background-color: rgb(210, 240, 250);
+
 }
 
-form {
-    width: 53px;
-    height: 53px;
+input:focus {
+    outline: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -25,28 +26,19 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-input:focus {
-    outline: none;
-}
-
-input {
-    width: 53px;
-    height: 53px;
-    border-style: none;
-    text-align: center;
-    padding: 0;
-    caret-color: transparent;
-    cursor: pointer;
-}
-
-input:hover {
-    background-color: rgb(210, 240, 250);
-}
-
 .active {
     background-color: rgb(210, 240, 250);
 }
 
 .invalid {
     background-color: rgb(250, 210, 210);
+}
+
+input:disabled {
+    cursor: default;
+    color: black;
+}
+
+input::placeholder {
+    color: black;
 }
