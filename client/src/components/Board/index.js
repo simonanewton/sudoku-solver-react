@@ -20,17 +20,21 @@ class Board extends Component {
         values.forEach(row => {
             let cellRow = [];
             row.forEach(value => cellRow.push(<Cell value={value} />));
-            cells.push(<Row className="m-0">{cellRow}</Row>);
+            cells.push(<Row className="m-0 flex-nowrap">{cellRow}</Row>);
         });
         return cells;
     }
 
     render = () => {
         return (
-            <Container>
-                <div className="border border-dark border-3">
+            <Container className="d-flex position-relative">
+                <div className="border border-dark border-4">
                     {this.renderCells(this.props.values)}
                 </div>
+                <div className="vertical-line-1"></div>
+                <div className="vertical-line-2"></div>
+                <div className="horizontal-line-1"></div>
+                <div className="horizontal-line-2"></div>                
             </Container>
         );
     }
