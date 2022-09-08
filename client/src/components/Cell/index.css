@@ -11,34 +11,25 @@ input {
     cursor: pointer;
 }
 
-input:enabled:hover {
-    background-color: rgb(210, 240, 250);
-
-}
-
 input:focus {
     outline: none;
+}
+
+input:enabled:hover, .active {
+    background-color: rgb(210, 240, 250);
+}
+
+input:disabled {
+    cursor: default;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: black;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-.active {
-    background-color: rgb(210, 240, 250);
-}
-
-.invalid {
-    background-color: rgb(250, 210, 210);
-}
-
-input:disabled {
-    cursor: default;
-    color: black;
-}
-
-input::placeholder {
-    color: black;
 }

@@ -27,11 +27,11 @@ class App extends Component {
 
     stopTimer = () => {
         clearInterval(this.timer);
-        this.timer = 0;
     }
 
     resetTimer = () => {
         this.stopTimer();
+        this.timer = 0;
         this.setState({ time: 0 });
         this.startTimer();
     }
@@ -62,7 +62,8 @@ class App extends Component {
                         {this.state.values ? <Board values={this.state.values} /> : null}
                     </div>
                     <div className="my-auto">
-                        <InputPanel difficulty={this.state.difficulty} time={this.state.time} generate={this.generateNewBoard} />
+                        <InputPanel difficulty={this.state.difficulty} time={this.state.time}
+                            pause={this.stopTimer} start={this.startTimer} generate={this.generateNewBoard} />
                     </div>
                 </Container>
             </div>

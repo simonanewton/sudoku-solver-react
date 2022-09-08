@@ -1,5 +1,5 @@
 .vertical-line-1 {
-    height: 36.6rem;
+    height: 36.3rem;
     border-left: 4px black solid;
     position: absolute;
     left: 12.8rem;
@@ -15,14 +15,14 @@
 
 .horizontal-line-1 {
     width: 36.3rem;
-    border-top: 4px black solid;
+    border-top: 3px black solid;
     position: absolute;
-    top: 12rem;
+    top: 12.1rem;
 }
 
 .horizontal-line-2 {
     width: 36.3rem;
-    border-top: 4px black solid;
+    border-top: 3px black solid;
     position: absolute;
-    top: 24rem;
+    top: 24.1rem;
 }

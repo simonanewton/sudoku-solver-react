@@ -4,7 +4,7 @@ import "./index.css"
 
 const Header = () => {
     return (
-        <Navbar bg="primary" variant="dark" expand="lg" className="p-4 mb-4 justify-content-center">
+        <Navbar bg="dark" variant="dark" expand="lg" className="p-3 mb-4 justify-content-center">
             <Navbar.Brand id="header-title">Sudoku Solver</Navbar.Brand>
         </Navbar>
     );

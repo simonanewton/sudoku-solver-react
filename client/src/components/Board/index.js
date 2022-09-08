@@ -4,17 +4,6 @@ import Cell from "../Cell";
 import "./index.css";
 
 class Board extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            userValues: []
-        }
-    }
-
-    resetValues = () => {
-        this.setState({ userValues: [] });
-    }
-
     renderCells = (values) => {
         let cells = [];
         values.forEach(row => {
@@ -28,7 +17,7 @@ class Board extends Component {
     render = () => {
         return (
             <Container className="d-flex position-relative">
-                <div className="border border-dark border-4">
+                <div className="border border-dark border-5">
                     {this.renderCells(this.props.values)}
                 </div>
                 <div className="vertical-line-1"></div>
