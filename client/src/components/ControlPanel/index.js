@@ -4,9 +4,9 @@ import { Card, Button } from "react-bootstrap";
 class ControlPanel extends Component {
     render = () => {
         return (
-            <Card className="d-grid gap-4 p-4 text-center">
+            <Card className="p-4 border-dark text-center d-grid gap-4 w-100">
                 <div>
-                    <h4 className="m-0 text-center">New Game</h4>
+                    <h4 className="m-0 text-center text-nowrap">New Game</h4>
                     <hr className="mb-0"/>
                 </div>
                 <Button variant="outline-success" onClick={() => this.props.generate("easy")}>Easy Puzzle</Button>

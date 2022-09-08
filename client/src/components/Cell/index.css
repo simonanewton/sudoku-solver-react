@@ -22,6 +22,7 @@ input:enabled:hover, .active {
 input:disabled {
     cursor: default;
     font-weight: bold;
+    background-color: rgb(230, 230, 230);
 }
 
 input::placeholder {

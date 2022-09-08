@@ -2,7 +2,7 @@
     height: 36.3rem;
     border-left: 4px black solid;
     position: absolute;
-    left: 12.8rem;
+    left: 12.3rem;
 
 }
 
@@ -10,19 +10,19 @@
     height: 36.3rem;
     border-left: 4px black solid;
     position: absolute;
-    left: 24.8rem;
+    left: 24.3rem;
 }
 
 .horizontal-line-1 {
     width: 36.3rem;
-    border-top: 3px black solid;
+    border-top: 4px black solid;
     position: absolute;
-    top: 12.1rem;
+    top: 12.2rem;
 }
 
 .horizontal-line-2 {
     width: 36.3rem;
-    border-top: 3px black solid;
+    border-top: 4px black solid;
     position: absolute;
-    top: 24.1rem;
+    top: 24.2rem;
 }

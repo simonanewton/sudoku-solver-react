@@ -13,10 +13,10 @@ class InputPanel extends Component {
 
     render = () => {
         return (
-            <Card className="p-3">
-                <div className="p-2 d-flex justify-content-between align-items-center w-100">
-                    <h4 className="m-0">{`Difficulty: ${this.capitalizeDifficulty(this.props.difficulty)}`}</h4>
-                    <p className="m-0">{`${this.formartTime(this.props.time)}s`}</p>
+            <Card className="p-3 border-dark w-100">
+                <div className="p-2 pb-0 text-center">
+                    <h4>{`Difficulty: ${this.capitalizeDifficulty(this.props.difficulty)}`}</h4>
+                    <p className="m-0">{`Time: ${this.formartTime(this.props.time)}s`}</p>
                 </div>
                 <hr className="mx-2 mb-3" />
                 <div className="p-2 text-center">

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Header from "./components/Header";
 import ControlPanel from "./components/ControlPanel";
 import InputPanel from "./components/InputPanel";
@@ -31,8 +31,8 @@ class App extends Component {
 
     resetTimer = () => {
         this.stopTimer();
-        this.timer = 0;
         this.setState({ time: 0 });
+        this.timer = 0;
         this.startTimer();
     }
 
@@ -54,17 +54,19 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Container fluid className="my-4 d-flex justify-content-center">
-                    <div className="my-auto">
-                        <ControlPanel generate={this.generateNewBoard} />
-                    </div>
-                    <div className="mx-3">
-                        {this.state.values ? <Board values={this.state.values} /> : null}
-                    </div>
-                    <div className="my-auto">
-                        <InputPanel difficulty={this.state.difficulty} time={this.state.time}
-                            pause={this.stopTimer} start={this.startTimer} generate={this.generateNewBoard} />
-                    </div>
+                <Container className="my-5">
+                    <Row>
+                        <Col lg={3} className="px-4 my-auto">
+                            <ControlPanel generate={this.generateNewBoard} />
+                        </Col>
+                        <Col lg="auto" className="p-0">
+                            {this.state.values ? <Board values={this.state.values} /> : null}
+                        </Col>
+                        <Col lg={3} className="px-4 my-auto">
+                            <InputPanel difficulty={this.state.difficulty} time={this.state.time}
+                                pause={this.stopTimer} start={this.startTimer} generate={this.generateNewBoard} />
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         );
