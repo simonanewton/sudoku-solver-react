@@ -54,8 +54,8 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Container className="my-5">
-                    <Row>
+                <Container fluid className="my-5">
+                    <Row className="justify-content-center">
                         <Col lg={3} className="px-4 my-auto">
                             <ControlPanel generate={this.generateNewBoard} />
                         </Col>
