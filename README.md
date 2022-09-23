@@ -6,7 +6,7 @@
 
 ## Description
 
-Sudoku Solver is a React based web application that generates a valid Sudoku puzzle that users can interact with while keeping track of their elapsed time. Users can generate puzzles at various difficulties so that they can start a new board if they get stuck, find the puzzle too easy, or want something unpredictable. While playing, users can also choose to stop the timer to track their progress, clear the puzzle from the board to start over, or learn more about the game and how it was made.
+Sudoku Solver is a [React](https://reactjs.org/) based web application that generates a valid Sudoku puzzle that users can interact with while keeping track of their elapsed time. Users can generate puzzles at various difficulties so that they can start a new board if they get stuck, find the puzzle too easy, or want something unpredictable. While playing, users can also choose to stop the timer to track their progress, clear the puzzle from the board to start over, or learn more about the game and how it was made.
 
 <div align="center">
 <img src="./assets/site-preview.png" alt="Sudoku Solver Website Preview" />
@@ -24,7 +24,7 @@ Sudoku Solver is a React based web application that generates a valid Sudoku puz
 
 ## Development
 
-React is great for creating iterative components so that developers don't have to waste time updating and testing similar elements. However, another pillar of utility behind React is the ability for components to have state by keeping track of their own information. Two predominate examples of stateful behavior in this application include the management of puzzle data and the updating of the board timer as seen in the code exerpt above.
+React is great for creating iterative [components](https://reactjs.org/#a-simple-component) so that developers don't have to waste time updating and testing similar elements. However, another pillar of utility behind React is the ability for components to have [state](https://reactjs.org/#a-stateful-component) by keeping track of their own information. Two predominate examples of stateful behavior in this application include the management of puzzle data and the updating of the board timer as seen in the code exerpt below.
 
 ```js
 class App extends Component {
