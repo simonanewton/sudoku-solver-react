@@ -63,7 +63,7 @@ class App extends Component {
                         <Col className="px-3 my-auto d-none d-xl-flex">
                             <ControlPanel generate={this.generateNewBoard} />
                         </Col>
-                        <Col xs={12} md={6} className="">
+                        <Col xs={12} md={6}>
                             {this.state.values ? <Board values={this.state.values} /> : null}
                         </Col>
                         <Col className="px-3 my-auto d-none d-xl-flex">
