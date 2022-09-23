@@ -58,7 +58,7 @@ class App extends Component {
         return (
             <main className="vh-100" id="content">
                 <Header />
-                <Container fluid={"xxl"} className="py-5">
+                <Container fluid={"xxl"} className="py-4 py-lg-5">
                     <Row className="g-0 justify-content-center">
                         <Col className="px-3 my-auto d-none d-xl-flex">
                             <ControlPanel generate={this.generateNewBoard} />
@@ -68,7 +68,7 @@ class App extends Component {
                         </Col>
                         <Col className="px-3 my-auto d-none d-xl-flex">
                             <InputPanel difficulty={this.state.difficulty} time={this.state.time}
-                                pause={this.stopTimer} start={this.startTimer} generate={this.generateNewBoard} />
+                                stop={this.stopTimer} start={this.startTimer} generate={this.generateNewBoard} />
                         </Col>
                     </Row>
                 </Container>

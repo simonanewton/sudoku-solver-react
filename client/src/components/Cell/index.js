@@ -14,6 +14,10 @@ class Cell extends Component {
         this.setState({ input: event.target.value });
     }
 
+    componentDidUpdate = (prevProps, prevState) => {
+        if (!prevProps.value && this.props.value) this.setState({ input: "" });
+    }
+
     render = () => {
         return (
             <Col className="border border-dark border-1">

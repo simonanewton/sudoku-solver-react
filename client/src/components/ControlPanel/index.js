@@ -10,9 +10,9 @@ class ControlPanel extends Component {
                     <hr className="mb-0"/>
                 </div>
                 <Button variant="outline-success" onClick={() => this.props.generate("easy")}>Easy Puzzle</Button>
-                <Button variant="outline-warning" onClick={() => this.props.generate("medium")}>Medium Puzzle</Button>
+                <Button variant="outline-primary" onClick={() => this.props.generate("medium")}>Medium Puzzle</Button>
                 <Button variant="outline-danger" onClick={() => this.props.generate("hard")}>Hard Puzzle</Button>
-                <Button variant="outline-primary" onClick={() => this.props.generate("random")}>Random Puzzle</Button>
+                <Button variant="outline-dark" onClick={() => this.props.generate("random")}>Random Puzzle</Button>
             </Card>
         );
     }
