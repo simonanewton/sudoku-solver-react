@@ -1,7 +1,7 @@
 {
   "name": "sudoku-solver-react",
   "version": "1.0.0",
-  "description": "This is a react application that can create and solve sudoku boards.",
+  "description": "This is a react application that generates playable sudoku boards.",
   "main": "server.js",
   "scripts": {
 		"start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
