@@ -6,10 +6,12 @@ import "./index.css";
 class Board extends Component {
     renderCells = (values) => {
         let cells = [];
+        let numValues = 0;
+        let numRows = 0;
         values.forEach(row => {
             let cellRow = [];
-            row.forEach(value => cellRow.push(<Cell value={value} />));
-            cells.push(<Row className="m-0 flex-nowrap">{cellRow}</Row>);
+            row.forEach(value => cellRow.push(<Cell key={numValues++} value={value} />));
+            cells.push(<Row key={numRows++} className="m-0 g-0 flex-nowrap">{cellRow}</Row>);
         });
         return cells;
     }
@@ -17,8 +19,8 @@ class Board extends Component {
     render = () => {
         return (
             <div className="d-flex justify-content-center">
-                <div className="d-flex position-relative">
-                    <div className="border border-dark border-5">
+                <div className="bg-dark border border-dark border-5 d-flex position-relative">
+                    <div>
                         {this.renderCells(this.props.values)}
                     </div>
                     <div className="vertical-line-1"></div>

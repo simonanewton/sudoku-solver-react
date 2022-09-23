@@ -1,28 +1,28 @@
 .vertical-line-1 {
-    height: 36.3rem;
-    border-left: 4px black solid;
+    height: 100%;
+    border-left: 0.3rem rgb(33, 37, 41) solid;
     position: absolute;
-    left: 12.3rem;
+    left: 33.3%;
 
 }
 
 .vertical-line-2 {
-    height: 36.3rem;
-    border-left: 4px black solid;
+    height: 100%;
+    border-left: 0.3rem rgb(33, 37, 41) solid;
     position: absolute;
-    left: 24.3rem;
+    left: 66.7%;
 }
 
 .horizontal-line-1 {
-    width: 36.3rem;
-    border-top: 4px black solid;
+    width: 100%;
+    border-top: 0.3rem rgb(33, 37, 41) solid;
     position: absolute;
-    top: 12.2rem;
+    top: 33.3%;
 }
 
 .horizontal-line-2 {
-    width: 36.3rem;
-    border-top: 4px black solid;
+    width: 100%;
+    border-top: 0.3rem rgb(33, 37, 41) solid;
     position: absolute;
-    top: 24.2rem;
+    top: 66.6%;
 }

@@ -1,32 +1,25 @@
 input {
+    padding: 0rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
     width: 4rem;
     height: 4rem;
-    border: solid;
-    border-width: 1px;
-    border-color: black;
-    font-size: 24px;
-    text-align: center;
-    padding: 0;
     caret-color: transparent;
     cursor: pointer;
+    outline: none !important;
 }
 
-input:focus {
-    outline: none;
-}
-
-input:enabled:hover, .active {
+input:enabled:hover,
+input:enabled:focus {
     background-color: rgb(210, 240, 250);
 }
 
 input:disabled {
-    cursor: default;
+    color: black;
     font-weight: bold;
     background-color: rgb(230, 230, 230);
-}
-
-input::placeholder {
-    color: black;
+    cursor: default;
 }
 
 input[type=number]::-webkit-inner-spin-button,

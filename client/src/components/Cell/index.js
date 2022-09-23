@@ -6,34 +6,18 @@ class Cell extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: "",
-            active: false
+            input: ""
         };
     }
 
-    activateCell = () => {
-        this.setState({ active: true });
-    }
-
-    deactivateCell = () => {
-        this.setState({ active: false });
-    }
-
     updateInput = (event) => {
-        this.setState({ value: event.target.value });
-    }
-
-    componentDidMount = () => {
-        this.setState({ value: "" });
-        if (this.props.value > 0) this.setState({ value: this.props.value, preset: true });
+        this.setState({ input: event.target.value });
     }
 
     render = () => {
         return (
-            <Col className="p-0">
-                {this.props.value ? <input disabled placeholder={this.props.value} /> :
-                    <input onFocus={this.activateCell} onBlur={this.deactivateCell} onInput={this.updateInput}
-                        className={`${this.state.active ? "active" : ""}`} />}
+            <Col className="border border-dark border-1">
+                <input value={this.props.value ? this.props.value : this.state.input} disabled={!!this.props.value} onChange={this.updateInput} />
             </Col>
         );
     }

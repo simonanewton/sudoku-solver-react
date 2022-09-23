@@ -11,9 +11,9 @@ class App extends Component {
         super(props);
         this.timer = 0;
         this.state = {
-            values: null,
+            time: 0,
             difficulty: null,
-            time: 0
+            values: null
         };
     }
 
@@ -38,10 +38,10 @@ class App extends Component {
 
     generateNewBoard = (level) => {
         level ? this.resetTimer() : this.stopTimer();
-        var requestParam = level ? "?difficulty=" + level : level;
+        const requestParam = level ? "?difficulty=" + level : level;
         fetch(`https://sugoku.herokuapp.com/board${requestParam}`)
-            .then(res => res.json())
-            .then(res => this.setState({ values: res.board, difficulty: level }))
+            .then(result => result.json())
+            .then(data => this.setState({ values: data.board, difficulty: level }))
             .catch(err => console.log(err));
     }
 
@@ -50,25 +50,29 @@ class App extends Component {
         this.generateNewBoard("random");
     }
 
+    componentWillUnmount = () => {
+        this.stopTimer();
+    }
+
     render = () => {
         return (
-            <div>
+            <main className="vh-100" id="content">
                 <Header />
-                <Container fluid className="my-5">
-                    <Row className="justify-content-center">
-                        <Col lg={3} className="px-4 my-auto">
+                <Container fluid={"xxl"} className="py-5">
+                    <Row className="g-0 justify-content-center">
+                        <Col className="px-3 my-auto d-none d-xl-flex">
                             <ControlPanel generate={this.generateNewBoard} />
                         </Col>
-                        <Col lg="auto" className="p-0">
+                        <Col xs={12} md={6} className="">
                             {this.state.values ? <Board values={this.state.values} /> : null}
                         </Col>
-                        <Col lg={3} className="px-4 my-auto">
+                        <Col className="px-3 my-auto d-none d-xl-flex">
                             <InputPanel difficulty={this.state.difficulty} time={this.state.time}
                                 pause={this.stopTimer} start={this.startTimer} generate={this.generateNewBoard} />
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </main>
         );
     }
 }
