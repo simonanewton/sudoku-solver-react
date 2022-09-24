@@ -56,9 +56,9 @@ class App extends Component {
 
     render = () => {
         return (
-            <main className="vh-100" id="content">
+            <main id="content">
                 <Header />
-                <Container fluid={"xxl"} className="py-4 py-lg-5">
+                <Container fluid={"xxl"} className="py-4">
                     <Row className="g-0 justify-content-center">
                         <Col className="px-3 my-auto d-none d-xl-flex">
                             <ControlPanel generate={this.generateNewBoard} />
