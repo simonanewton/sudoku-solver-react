@@ -39,7 +39,7 @@ class App extends Component {
     generateNewBoard = (level) => {
         level ? this.resetTimer() : this.stopTimer();
         const requestParam = level ? "?difficulty=" + level : level;
-        fetch(`https://sugoku.herokuapp.com/board${requestParam}`)
+        fetch(`https://sugoku2.herokuapp.com/board${requestParam}`)
             .then(result => result.json())
             .then(data => this.setState({ values: data.board, difficulty: level }))
             .catch(err => console.log(err));
